@@ -1,9 +1,10 @@
 package goumem
 
 import (
-	"github.com/exapsy/goumem/allocator"
 	"sync"
 	"unsafe"
+
+	"github.com/voidwyrm-2/goumem/allocator"
 )
 
 type PointerInt struct {
