@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/exapsy/goumem/allocator"
+	"github.com/voidwyrm-2/goumem/allocator"
 )
 
 var (

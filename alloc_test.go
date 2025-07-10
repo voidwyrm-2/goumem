@@ -4,8 +4,8 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/exapsy/goumem/allocator"
 	"github.com/stretchr/testify/suite"
+	"github.com/voidwyrm-2/goumem/allocator"
 )
 
 type TestAllocSuite struct {

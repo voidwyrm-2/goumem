@@ -3,7 +3,7 @@ package goumem
 import (
 	"reflect"
 
-	"github.com/exapsy/goumem/allocator"
+	"github.com/voidwyrm-2/goumem/allocator"
 )
 
 func Alloc(t interface{}) (*allocator.AllocatedBlock, error) {

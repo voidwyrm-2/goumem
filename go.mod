@@ -1,4 +1,4 @@
-module github.com/exapsy/goumem
+module github.com/voidwyrm-2/goumem
 
 go 1.23.0
 

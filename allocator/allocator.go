@@ -2,9 +2,10 @@ package allocator
 
 import (
 	"fmt"
-	memsyscall "github.com/exapsy/goumem/mem_syscall"
 	"sync/atomic"
 	"unsafe"
+
+	memsyscall "github.com/voidwyrm-2/goumem/mem_syscall"
 )
 
 var (

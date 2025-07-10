@@ -2,9 +2,7 @@ package allocator
 
 import "fmt"
 
-var (
-	Default = func() MemoryAllocator { return NewDefaultMemoryAllocator() }
-)
+var Default = func() MemoryAllocator { return NewDefaultMemoryAllocator() }
 
 type defaultAllocPolicy struct{}
 
@@ -82,7 +80,6 @@ as the policy should have selected a chunk with free bytes. chunk: %+v`, c,
 }
 
 func (s *defaultAllocStrategy) free(chunks *chunkList, block *AllocatedBlock) error {
-
 	block.chunkBlockMem.isFree.Store(true)
 
 	// merge adjacent blocks
