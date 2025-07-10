@@ -2,13 +2,12 @@ package goumem
 
 import (
 	"fmt"
-	"github.com/exapsy/goumem/allocator"
 	"unsafe"
+
+	"github.com/voidwyrm-2/goumem/allocator"
 )
 
-var (
-	ErrMatrixZeroSize = fmt.Errorf("goumem: matrix size cannot be zero")
-)
+var ErrMatrixZeroSize = fmt.Errorf("goumem: matrix size cannot be zero")
 
 type PointerMatrixFloat64 struct {
 	allocatedBlock *allocator.AllocatedBlock
