@@ -1,10 +1,8 @@
 package goumem
 
-import "github.com/exapsy/goumem/allocator"
+import "github.com/voidwyrm-2/goumem/allocator"
 
-var (
-	mem allocator.MemoryAllocator
-)
+var mem allocator.MemoryAllocator
 
 func SetMemoryAllocator(m allocator.MemoryAllocator) {
 	mem = m
