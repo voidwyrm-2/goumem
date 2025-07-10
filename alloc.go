@@ -1,8 +1,9 @@
 package goumem
 
 import (
-	"github.com/exapsy/goumem/allocator"
 	"reflect"
+
+	"github.com/exapsy/goumem/allocator"
 )
 
 func Alloc(t interface{}) (*allocator.AllocatedBlock, error) {

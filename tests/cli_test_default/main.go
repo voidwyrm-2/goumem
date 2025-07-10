@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/exapsy/goumem/allocator"
 )
 
@@ -16,8 +17,7 @@ func main() {
 
 alloc <size> - allocates <number> bytes and prints the index of the allocated block
 free <number> - frees the block with the given index
-exit - exits the program
-`)
+exit - exits the program`)
 
 	for {
 		command, err := scanCommand()

@@ -1,9 +1,10 @@
 package allocator
 
 import (
-	"github.com/stretchr/testify/suite"
 	"testing"
 	"unsafe"
+
+	"github.com/stretchr/testify/suite"
 )
 
 type AllocatorTestSuite struct {
@@ -205,7 +206,7 @@ func ExampleMemoryAllocator_Alloc() {
 	}
 }
 
-func ExampleAllocatedBlock_Set() {
+func AllocatedBlockSetExample() {
 	// Allocate a block of memory
 	block, err := Default().Alloc(10)
 	if err != nil {
@@ -213,7 +214,7 @@ func ExampleAllocatedBlock_Set() {
 	}
 
 	// Set data in the block
-	Set[string](block, "test data")
+	Set(block, "test data")
 
 	// Free the block
 	err = Default().Free(block)
@@ -222,7 +223,7 @@ func ExampleAllocatedBlock_Set() {
 	}
 }
 
-func ExampleAllocatedBlock_Get() {
+func AllocatedBlockGetExample() {
 	// Allocate a block of memory
 	block, err := Default().Alloc(10)
 	if err != nil {
@@ -243,7 +244,7 @@ func ExampleAllocatedBlock_Get() {
 	}
 }
 
-func ExampleAllocatedBlock_Copy() {
+func AllocatedBlockCopyExample() {
 	// Allocate a block of memory
 	srcBlock, err := Default().Alloc(10)
 	if err != nil {

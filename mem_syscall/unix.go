@@ -5,6 +5,8 @@ package memsyscall
 import (
 	"fmt"
 	"syscall"
+
+	"golang.org/x/sys/unix"
 )
 
 type unixSyscall struct{}
@@ -18,8 +20,8 @@ func (u *unixSyscall) Alloc(size uintptr) (uintptr, error) {
 		syscall.SYS_MMAP,
 		0,
 		size,
-		syscall.PROT_READ|syscall.PROT_WRITE,
-		syscall.MAP_ANONYMOUS|syscall.MAP_PRIVATE,
+		unix.PROT_READ|unix.PROT_WRITE,
+		unix.MAP_ANONYMOUS|unix.MAP_PRIVATE,
 		0,
 		0,
 	)

@@ -1,10 +1,12 @@
 module github.com/exapsy/goumem
 
-go 1.22
+go 1.23.0
+
+toolchain go1.24.4
 
 require (
 	github.com/stretchr/testify v1.8.4
-	golang.org/x/sys v0.15.0
+	golang.org/x/sys v0.34.0
 )
 
 require (

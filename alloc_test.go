@@ -1,10 +1,11 @@
 package goumem
 
 import (
-	"github.com/exapsy/goumem/allocator"
-	"github.com/stretchr/testify/suite"
 	"testing"
 	"unsafe"
+
+	"github.com/exapsy/goumem/allocator"
+	"github.com/stretchr/testify/suite"
 )
 
 type TestAllocSuite struct {

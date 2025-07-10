@@ -30,7 +30,7 @@ func BenchmarkCustomMemory(b *testing.B) {
 		var r float64
 		for pb.Next() {
 			randVal := rand.Float64()
-			for i := 0; i < numMatrices; i++ {
+			for range numMatrices {
 				matrix := pool.Get()
 				r += simulateReadWrite(matrix, randVal)
 				pool.Free(matrix)
@@ -96,8 +96,8 @@ func simulateReadWrite(matrix *PointerMatrixFloat64, randVal float64) float64 {
 	var val float64
 	rows := matrix.Rows()
 	cols := matrix.Cols()
-	for i := 0; i < rows; i++ {
-		for j := 0; j < cols; j++ {
+	for i := range rows {
+		for j := range cols {
 			val = matrix.GetRowColValue(i, j)
 			val *= randVal
 			matrix.SetRowColValue(i, j, val)
