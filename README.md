@@ -1,3 +1,8 @@
+# THIS IS A FORK
+
+I have done nothing whatsoever to contribute to the project, I simply needed to fix an issue, all credit goes to the original author, Apostolis/exapsy
+
+
 # Goumem - Manual Memory Allocation Library
 
 <p align="center">
